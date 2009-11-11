@@ -13,7 +13,7 @@ PREREQUISITES
     used directly. In order for this plugin to work properly, the following
     packages must be installed:
 
-      Apache2::WebApp::Toolkit
+      Apache2::WebApp
       Date::Calc
       Data::Validate::URI
       Email::Valid

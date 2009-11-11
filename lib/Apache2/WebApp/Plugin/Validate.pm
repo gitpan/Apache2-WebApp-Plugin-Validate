@@ -25,7 +25,7 @@ use HTTP::BrowserDetect;
 use Net::DNS::Check;
 use Params::Validate qw( :all );
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~[  OBJECT METHODS  ]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
@@ -163,12 +163,13 @@ sub email {
     my ( $self, $address, $mx )
       = validate_pos( @_,
           { type => OBJECT },
-          { type => SCALAR }
+          { type => SCALAR },
+          { type => SCALAR, optional => 1 }
           );
 
     my $valid = Email::Valid->address(
         -address => $address,
-        -mxcheck => ($mx) 1 : 0
+        -mxcheck => ($mx) ? 1 : 0
       ) ? 1 : 0;
 
     return $valid;
@@ -270,7 +271,7 @@ This package is part of a larger distribution and was NOT intended to be used
 directly.  In order for this plugin to work properly, the following packages
 must be installed:
 
-  Apache2::WebApp::Toolkit
+  Apache2::WebApp
   Date::Calc
   Data::Validate::URI
   Email::Valid

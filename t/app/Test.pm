@@ -53,10 +53,9 @@ sub domain {
     my ( $self, $c ) = @_;
 
     my $result1 = $c->plugin('Validate')->domain('domain.com');
-    my $result2 = $c->plugin('Validate')->domain('sub.domain.com');
-    my $result3 = $c->plugin('Validate')->domain('sub.domain');
+    my $result2 = $c->plugin('Validate')->domain('www.domain.com');
 
-    $self->_success($c) if ($result1 == 1 && $result2 == 0 && $result3 == 0);
+    $self->_success($c) if ($result1 == 1 && $result2 == 0);
 }
 
 sub email {
