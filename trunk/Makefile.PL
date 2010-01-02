@@ -21,7 +21,7 @@ WriteMakefile(
     AUTHOR       => 'Marc S. Brooks (mbrooks@cpan.org)',
     PREREQ_PM => {
         'Apache::Test'        => 0,
-        'Apache2::WebApp'     => 0.01,
+        'Apache2::WebApp'     => 0.21,
         'Date::Calc'          => 5.4,
         'Data::Validate::URI' => 0.05,
         'Email::Valid'        => 0.181,
