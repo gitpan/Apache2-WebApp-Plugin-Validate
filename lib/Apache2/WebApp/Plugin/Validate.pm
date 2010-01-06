@@ -25,7 +25,7 @@ use HTTP::BrowserDetect;
 use Net::DNS::Check;
 use Params::Validate qw( :all );
 
-our $VERSION = 0.05;
+our $VERSION = 0.06;
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~[  OBJECT METHODS  ]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
