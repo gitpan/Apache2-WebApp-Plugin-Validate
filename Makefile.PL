@@ -21,18 +21,19 @@ WriteMakefile(
     AUTHOR       => 'Marc S. Brooks (mbrooks@cpan.org)',
     PREREQ_PM => {
         'Apache::Test'        => 0,
-        'Apache2::WebApp'     => 0.21,
+        'Apache2::WebApp'     => 0.35,
         'Date::Calc'          => 5.4,
         'Data::Validate::URI' => 0.05,
         'Email::Valid'        => 0.181,
         'HTTP::BrowserDetect' => 0.98,
         'Net::DNS::Check'     => 0.45,
         'Params::Validate'    => 0,
+        'Test::More'          => 0,
     },
     clean => {
         FILES => "@{ clean_files() }",
     }
-);
+  );
 
 sub clean_files {
     return [@scripts];
